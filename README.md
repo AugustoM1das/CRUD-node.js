@@ -12,7 +12,6 @@ Este é um projeto simples de um CRUD (Create, Read, Update, Delete) feito em No
 ## Como usar
 
 1. Clone o repositório:
-```bash
 git clone https://github.com/AugustoM1das/CRUD-node.js.git
 
 2.Entre na pasta do projeto:
