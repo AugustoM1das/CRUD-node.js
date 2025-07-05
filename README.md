@@ -1,78 +1,82 @@
-# 📌 API RESTful de Gerenciamento de Tarefas
+# 📝 API de Gerenciamento de Tarefas
 
-Uma API completa para gerenciamento de tarefas (CRUD) desenvolvida com **Node.js**, **Express** e **MySQL**. Ideal para praticar conceitos de backend, integração com banco de dados relacional e documentação com Postman.
-
----
-
-## 📁 Funcionalidades
-
-- ✅ Criar tarefas (`POST /tasks`)
-- 📄 Listar todas as tarefas (`GET /tasks`)
-- 🔍 Obter uma tarefa por ID (`GET /tasks/:id`)
-- ✏️ Atualizar uma tarefa (`PUT /tasks/:id`)
-- ❌ Deletar uma tarefa (`DELETE /tasks/:id`)
+Essa é uma API REST feita com **Node.js**, **Express** e **MySQL**, focada no básico do CRUD para tarefas. O projeto tem como objetivo praticar e aplicar conhecimentos em backend, banco de dados e rotas.
 
 ---
 
-## 🧰 Tecnologias Utilizadas
+## 🔧 Funcionalidades
 
-- **Node.js**
-- **Express.js**
-- **MySQL**
-- **Sequelize (ou mysql2, se aplicável)**
-- **Postman** (para testes e documentação)
-- **Dotenv** (variáveis de ambiente)
+- Criar novas tarefas
+- Listar todas as tarefas
+- Buscar uma tarefa pelo ID
+- Atualizar dados de uma tarefa
+- Deletar uma tarefa
 
 ---
 
-## 🛠️ Instalação
+## 🛠️ Tecnologias
+
+- Node.js
+- Express
+- MySQL
+- Postman (para testes)
+- dotenv (para variáveis de ambiente)
+
+---
+
+## 📦 Como rodar o projeto
+
+1. Clone o repositório:
 
 no terminal :
-# Clone o repositório
 git clone https://github.com/AugustoM1das/CRUD-node.js.git
 cd CRUD-node.js
+```
 
-# Instale as dependências
+2. Instale as dependências:
+
+no terminal :
 npm install
+```
 
-# Configure o arquivo .env
-cp .env.example .env
+3. Crie um arquivo `.env` com suas configs de banco:
 
-Preencha o .env com suas credenciais:
-
+```env
 DB_HOST=localhost
 DB_USER=seu_usuario
 DB_PASSWORD=sua_senha
 DB_NAME=nome_do_banco
 DB_PORT=3306
+```
 
-🚀 Rodando a API
+4. Rode o servidor:
 
-# Inicie o servidor
+no terminal :
 npm start
+```
 
-A API estará disponível em: http://localhost:3000
+A API vai rodar em: [http://localhost:3000](http://localhost:3000)
 
-📬 Exemplos de Requisições (Postman)
+---
 
-A documentação da API pode ser importada diretamente no Postman.
-Você pode usar os seguintes endpoints para testar:
+## 🧪 Testes com Postman
 
-GET     /tasks
-POST    /tasks
-GET     /tasks/:id
-PUT     /tasks/:id
-DELETE  /tasks/:id
+Você pode testar todos os endpoints com o Postman. Alguns exemplos de rotas:
 
-💡 Aprendizados
-Este projeto me ajudou a:
+- `GET /tasks`
+- `GET /tasks/:id`
+- `POST /tasks`
+- `PUT /tasks/:id`
+- `DELETE /tasks/:id`
 
-Praticar rotas e middlewares com Express
+---
 
-Entender o fluxo completo de uma API RESTful
+## 💭 O que aprendi
 
-Integrar Node.js com banco de dados MySQL
+Esse projeto foi importante pra mim porque consegui entender melhor:
 
-Documentar e testar endpoints com Postman
-
-Organizar melhor a estrutura de um projeto backend
+- Como funciona uma API REST na prática
+- Como conectar o Node.js com MySQL
+- Como organizar rotas e middlewares
+- Como testar tudo usando o Postman
+- Como usar variáveis de ambiente
