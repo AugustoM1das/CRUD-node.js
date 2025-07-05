@@ -1,61 +1,78 @@
-# CRUD Node.js
+# 📌 API RESTful de Gerenciamento de Tarefas
 
-Este é um projeto simples de um CRUD (Create, Read, Update, Delete) feito em Node.js com Express.
+Uma API completa para gerenciamento de tarefas (CRUD) desenvolvida com **Node.js**, **Express** e **MySQL**. Ideal para praticar conceitos de backend, integração com banco de dados relacional e documentação com Postman.
 
-## Funcionalidades
+---
 
-- Criar tarefas
-- Listar tarefas
-- Atualizar tarefas
-- Deletar tarefas
+## 📁 Funcionalidades
 
-Testando a Aplicação no Postman:
-Caso queira testar as API's criadas no projeto, primeiro baixe o Postman. Depois de realizar o download do Postman, basta agora realizar os passos abaiaxo para poder testar cada API criada!
+- ✅ Criar tarefas (`POST /tasks`)
+- 📄 Listar todas as tarefas (`GET /tasks`)
+- 🔍 Obter uma tarefa por ID (`GET /tasks/:id`)
+- ✏️ Atualizar uma tarefa (`PUT /tasks/:id`)
+- ❌ Deletar uma tarefa (`DELETE /tasks/:id`)
 
-ROTA	HTTP(Verbo)	Descrição
-/api/usuarios	GET	Selecionar Todos
-/api/usuarios	POST	Atualizar Por Id
-/api/usuarios/:usuario_id	GET	Selecionar Por Id
-/api/usuarios/:usuario_id	PUT	Atualizar Por Id
-/api/usuarios/:usuario_id	DELETE	Excluir Por Id
-Executar Localmente
-Caso você deseja executar o projeto na sua máquina local, basta seguir os passos abaixo:
+---
 
-Começando...
-Para começar, você deve simplesmente clonar o repositório do projeto na sua máquina e instalar as dependências.
+## 🧰 Tecnologias Utilizadas
 
-Pre-Requisitos
-Antes de instalar as dependências no projeto, você precisa já ter instalado na sua máquina:
+- **Node.js**
+- **Express.js**
+- **MySQL**
+- **Sequelize (ou mysql2, se aplicável)**
+- **Postman** (para testes e documentação)
+- **Dotenv** (variáveis de ambiente)
 
-Node.Js: Caso não tenha, basta realizar o download Aqui
-MongoDb: Caso também não tenha, basta realizar o download Aqui
-p.s.: o MongoDb caso você decida conectar a sua base de dados de maneira local. Caso não, basta usar a base de dados do MongoDb em Cloud:
+---
 
-Modulus
-MLab
-Instalando as Dependências
-Abre o cmd (caso esteja utilizando o Windows) e digite a path do seu projeto
+## 🛠️ Instalação
 
-cd "C:\Users\NomeDoComputador\Documents\..."
-Depois, quando estiver na pasta do projeto, basta digitar no cmd a seguinte instrução:
+no terminal :
+# Clone o repositório
+git clone https://github.com/AugustoM1das/CRUD-node.js.git
+cd CRUD-node.js
 
+# Instale as dependências
 npm install
-Ao digitar a instrução acima, automaticamente ele irá baixar todas as dependências listadas no arquivo package.json:
 
-node_modules - que contêm os packages do npm que precisará para o projeto.
-Executando a Aplicação
-Bom, agora na mesma tela do cmd, basta iniciar o server para o projeto ser executado localmente.
+# Configure o arquivo .env
+cp .env.example .env
 
-node server.js
-Depois, você precisará abrir um outro terminal na sua máquina e iniciar o MongoDb. Basta digitar na tela do cmd o seguinte comando:
+Preencha o .env com suas credenciais:
 
-mongod
-Caso o MongoDb esteja devidamente instalado em sua máquina, ele iniciará o serviço mostrando que a port 27017 foi iniciada.
+DB_HOST=localhost
+DB_USER=seu_usuario
+DB_PASSWORD=sua_senha
+DB_NAME=nome_do_banco
+DB_PORT=3306
 
-Agora, abre a página da aplicação em http://localhost:8000/api. E pronto a aplicação será executada de maneira local na sua máquina.
+🚀 Rodando a API
 
-p.s.: no projeto, disponibilizei 2 maneiras de realizar a conexão de dados com o MongoDb através do Mongoose:
+# Inicie o servidor
+npm start
 
-De maneira local: utilizando o MongoDb;
-De maneira em cloud: utilizando o Modulus;
-Fiquem à vontade em usar ou até mesmo testar ambas as conexões!! :)
+A API estará disponível em: http://localhost:3000
+
+📬 Exemplos de Requisições (Postman)
+
+A documentação da API pode ser importada diretamente no Postman.
+Você pode usar os seguintes endpoints para testar:
+
+GET     /tasks
+POST    /tasks
+GET     /tasks/:id
+PUT     /tasks/:id
+DELETE  /tasks/:id
+
+💡 Aprendizados
+Este projeto me ajudou a:
+
+Praticar rotas e middlewares com Express
+
+Entender o fluxo completo de uma API RESTful
+
+Integrar Node.js com banco de dados MySQL
+
+Documentar e testar endpoints com Postman
+
+Organizar melhor a estrutura de um projeto backend
